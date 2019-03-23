@@ -18,7 +18,7 @@
     <a href="https://quentinbrunelle.github.io/WebAnalytics/en/produits.html" id="produits_en">Produits (EN)</a>
     <a href="https://quentinbrunelle.github.io/WebAnalytics/contact.html" id="contact">Contact</a>
 
-    <h1>Home Page</h1>
+    <h1 id="title_home_page">Home Page</h1>
 
 
 
@@ -28,11 +28,26 @@
             var id = $(this).attr('id');
 
             if(id === "produits_fr"){
-                ga('send', 'fr/produits.html', '/produits');
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'home page',
+                    eventAction: 'click',
+                    eventLabel: 'produit FR'
+                });
             }else if(id === "produits_en"){
-                ga('send', 'en/produits.html', '/produits');
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'home page',
+                    eventAction: 'click',
+                    eventLabel: 'produit EN'
+                });
             }else if(id === "contact"){
-                ga('send', 'contact.html', '/contact');
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'home page',
+                    eventAction: 'click',
+                    eventLabel: 'contact'
+                });
             } 
         })
     </script>
