@@ -15,9 +15,9 @@
         <!-- End Google Analytics -->
 </head>
 <body>
-        <a href="#" id="produits_fr">Produits (FR)</a>
-        <a href="#" id="produits_en">Produits (EN)</a>
-        <a href="#" id="contact">Contact</a>
+        <a href="produits.html" id="produits_fr">Produits (FR)</a>
+        <a href="../en/produits.html" id="produits_en">Produits (EN)</a>
+        <a href="../contact.html" id="contact">Contact</a>
 
     <h1>Produits FR</h1>
     <img src="http://lorempixel.com/100/100/" alt="image">
@@ -44,9 +44,9 @@
             if(id === "produits_fr"){
                 ga('send', 'produits.html', '/produits');
             }else if(id === "produits_en"){
-                ga('send', '../../en/produits.html', '/produits');
+                ga('send', '../en/produits.html', '/produits');
             }else if(id === "contact"){
-                ga('send', '../../contact.html', '/contact');
+                ga('send', '../contact.html', '/contact');
             } 
         })
     </script>
