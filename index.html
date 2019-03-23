@@ -15,10 +15,24 @@
         <!-- End Google Analytics -->
 </head>
 <body>
-    <a href="fr/produits.html">Produits (FR)</a>
-    <a href="en/produits.html">Produits (EN)</a>
-    <a href="contact.html">Contact</a>
+    <a href="#" id="produits_fr">Produits (FR)</a>
+    <a href="#" id="produits_en">Produits (EN)</a>
+    <a href="#" id="contact">Contact</a>
 
     <h1>Home Page</h1>
+
+    <script>
+        $("a").on("click", function(){
+            var id = $(this).attr('id');
+
+            if(id === "produits_fr"){
+                ga('send', 'fr/produits.html', '/produits');
+            }else if(id === "produits_en"){
+                ga('send', 'en/produits.html', '/produits');
+            }else if(id === "contact"){
+                ga('send', 'contact.html', '/contact');
+            } 
+        })
+    </script>
 </body>
 </html>

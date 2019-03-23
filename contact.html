@@ -41,7 +41,7 @@
             var success = $('#success');
 
             if($('#nom').val() != "" && $('#prenom').val() != ""){
-                $(success).show();
+                ga('send', 'contact.html', '/contact/confirmation');
             }
 
         }
