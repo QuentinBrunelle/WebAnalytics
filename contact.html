@@ -22,7 +22,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script>
-        function getForm(){
+        function getForm(e){
+            e.preventDefault();
             console.log("Dans getForm()");
             console.log($('#nom').val());
             console.log($('#prenom').val());
