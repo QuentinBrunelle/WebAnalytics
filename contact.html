@@ -7,14 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div id="success" style="display:none;">
+        <p>Success</p>
+    </div>
     <form action="">
         <label for="nom">Nom : </label>
-        <input type="text" name="nom" id="">
+        <input type="text" name="nom" id="nom">
 
         <label for="prenom">Prénom : </label>
-        <input type="text" name="prenom" id="">
+        <input type="text" name="prenom" id="prenom">
 
-        <input type="submit" value="Valider le formulaire">
+        <input type="submit" value="Valider le formulaire" onclick="getForm()">
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script>
+        function getForm(){
+            var success = $('#success');
+
+            if($('#nom').val() != "" && $('#prenom').val() != ""){
+                $(success).show();
+            }
+
+        }
+    </script>
 </body>
 </html>
